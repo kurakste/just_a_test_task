@@ -29,7 +29,6 @@ function getTemplate(data) {
 
 function addAlertMessage(errMsg) {
   const parent = document.getElementById('divForMessage')
-  console.log('parent', parent)
   const el = document.createElement('div')
   el.innerHTML = `<div class="alert alert-danger" role="alert">${errMsg}</div>`
   parent && parent.appendChild(el)
@@ -37,7 +36,6 @@ function addAlertMessage(errMsg) {
   let counter = 100
   const removeElement = () => {
     --counter
-    console.log(counter)
     el.style.opacity = `${counter}%`
     if (counter <= 0) {
       clearInterval(intervalId)
